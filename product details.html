@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Red store | Ecommerece Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+      <div class="container">
+        <div class="navbar">
+           <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt=".." width="130px"></a>
+           </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" alt="cart" width="20px" height="20px">
+            <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+       </div>
+     </div>
+     
+    <!------------------------------------Single product details------------------------------------------------>
+ 
+     <div class="small-container single-product">
+         <div class="row">
+             <div class="col-2">
+                 <img src="images/gallery-1.jpg"  width="100%" id="ProductImg" alt="">
+                 
+                 <div class="small-img-row">
+                     <div class="small-img-col">
+                         <img src="images/gallery-1.jpg" width="100%" alt="" class="small-img">
+                     </div>
+                     <div class="small-img-col">
+                         <img src="images/gallery-2.jpg" width="100%" alt="" class="small-img">
+                     </div>
+                     <div class="small-img-col">
+                         <img src="images/gallery-3.jpg" width="100%" alt="" class="small-img">
+                     </div>
+                     <div class="small-img-col">
+                         <img src="images/gallery-4.jpg" width="100%" alt="" class="small-img">
+                     </div>
+                 </div>
+             </div>
+             <div class="col-2">
+                 <p>Home / T-shirt</p>
+                 <h1>Red printed T-shirt by Hrx</h1>
+                 <h4>$60.00</h4>
+                 <Select>
+                     <option >select size</option>
+                     <option >small</option>
+                     <option >medium</option>
+                     <option >large</option>
+                     <option >Xl</option>
+                     <option >XXl</option>
+                 </Select>
+                     <input type="number" value="1">
+                     <a href="" class="btn">Add to bag</a>
+                     <h3>Product details</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, <br>adipisci saepe modi voluptatum eos eaque?</p>
+             </div>
+         </div>
+     </div>
+  <!-- ---------------------------------------------title------------------------------------------------ -->
+  
+  
+  <div class="small-container">
+      <div class="row row-2">
+          <h2>Related Products</h2>
+          <p>View more</p>
+      </div>
+  </div>
+  
+  <!----------------------------------------------- Products---------------------------------------------- -->
+ <div class="small-container">
+     <div class="row">
+         <div class="col-4">
+             <img src="images/product-9.jpg" alt="">
+             <h4>Red printed t-shirt</h4>
+             <p>$50.00</p>
+         </div>
+         <div class="col-4">
+             <img src="images/product-10.jpg" alt="">
+             <h4>Hrx shoes</h4>
+             <p>$50.00</p>
+         </div>
+         <div class="col-4">
+             <img src="images/product-11.jpg" alt="">
+             <h4>Grey jogger</h4>
+             <p>$50.00</p>
+         </div>
+         <div class="col-4">
+             <img src="images/product-12.jpg" alt="">
+             <h4>Puma t-shirt</h4>
+             <p>$50.00</p>
+         </div>
+    </div>
+</div>
+<!-------------------Footer--------------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our app</h3>
+                    <p>Download app for android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+                   <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eos officiis aut accusantium <br>laborum repellat dolore doloribus sequi laudantium quia!</p>
+                </div> 
+                   <div class="footer-col-3">
+                   <h3>Useful links</h3>
+                   <ul>
+                       <li>Coupons</li>
+                       <li>Blog post</li>
+                       <li>Return policy</li>
+                       <li>Join affiliate</li>
+                   </ul>
+                </div> 
+                  <div class="footer-col-4">
+                   <h3>Follow us</h3>
+                   <ul>
+                       <li>Facebook</li>
+                       <li>Twitter</li>
+                       <li>Instagram</li>
+                       <li>You tube</li>
+                   </ul>
+                </div>
+                
+            </div>
+            <hr>
+                <p class="copyright"> Copyright 2021 - RED STORE</p>
+        </div>
+    </div>
+    
+    <!------------------------------Js for toggle menu---------------------------------------------------->
+   
+     <script>
+        var MenuItems= document.getElementById("MenuItems");
+        
+       MenuItems.style.maxHeight= "0px";
+        
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+                {
+                   MenuItems.style.maxHeight= "200px";
+                }
+            else
+                {
+                    MenuItems.style.maxHeight= "0px";
+                }
+        }
+    </script>
+  <!---------------------------------------------Js for product gallery------------------------------------->
+  <script>
+         
+      var ProductImg = document.getElementById("ProductImg");
+      var SmallImg = document.getElementsByClassName("small-img");
+        SmallImg[0].onclick = function(){
+            
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function(){
+            
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function(){
+            
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function(){
+            
+            ProductImg.src = SmallImg[3].src;
+        }
+         
+  </script>
+      
+</body>
+</html>
